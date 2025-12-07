@@ -1,0 +1,4 @@
+name: ChestLog
+version: '1.0'
+main: yorick.gg.chestLog.ChestLog
+api-version: '1.21'

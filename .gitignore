@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Build
+build/
+out/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Kotlin
+.kotlin/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Misc
+*.log
+*.class
+*.jar
+!gradle-wrapper.jar
+*.zip
+*.tar.gz
