@@ -20,7 +20,6 @@ class ChestListener(private val plugin: ChestLog) : Listener {
 
     @EventHandler
     fun onMoveItem(event: InventoryClickEvent) {
-        
         val player: HumanEntity = event.whoClicked
         val playerLoc = player.location
         val dateAndTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-YYYY HH:mm"))
@@ -56,13 +55,11 @@ class ChestListener(private val plugin: ChestLog) : Listener {
 
         if (!event.inventory.type.equals(InventoryType.CHEST)) return
         if (inventoryInfo.clickedInv != inventoryInfo.invType) return
-        if (event.action != InventoryAction.PLACE_ALL && event.action != InventoryAction.MOVE_TO_OTHER_INVENTORY) return
         
         val newLine:String = "${playerInfo.name} grabbed item: ${playerInfo.newItem} (${playerInfo.itemAmount}) from a chest at X:${playerInfo.x} Y:${playerInfo.z} Z:${playerInfo.z} ($dateAndTime)\n" 
 
         if (logFile.exists()) {
             logFile.appendText(newLine)
         }
-
     }
 }
