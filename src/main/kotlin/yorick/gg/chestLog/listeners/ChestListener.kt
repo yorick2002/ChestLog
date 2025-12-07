@@ -63,6 +63,5 @@ class ChestListener(private val plugin: ChestLog) : Listener {
         if (logFile.exists()) {
             logFile.appendText(newLine)
         }
-
     }
 }
